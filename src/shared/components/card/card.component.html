@@ -1,0 +1,14 @@
+<div class="container border shadow p-0">
+    <div class="content row m-0">
+        <div class="col-9 left-content d-flex flex-column justify-content-center align-content-center align-items-start flex-grow-1">
+            <div class="title">{{ title | titlecase }}</div>
+            <div class="assignee">{{ assignee | titlecase }}</div>
+        </div>
+        <div class="col-3 right-content d-flex flex-column justify-content-center align-content-center align-items-center flex-grow-1" [ngClass]="{ 'completed': completed, 'pending': !completed }">
+            <ng-container [ngSwitch]="completed">
+                <div *ngSwitchCase="true"><i class="fas fa-check"></i></div>
+                <div *ngSwitchCase="false"><i class="fas fa-minus"></i></div>
+            </ng-container>
+        </div>
+    </div>
+</div>

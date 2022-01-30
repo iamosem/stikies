@@ -1,0 +1,107 @@
+@keyframes spin {
+    0% {
+      transform: translateZ(0) rotate(0);
+    }
+
+    100% {
+      transform: translateZ(0) rotate(360deg);
+    }
+}
+
+.loading-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-cont .loading-veil {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    opacity: 0.8;
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
+    -o-filter: blur(1px);
+    filter: blur(1px);
+}
+
+.loading-cont .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.loading-cont .loader:after {
+    content: attr(data-text);
+    display: block;
+    max-width: 125px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #343a40;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.loading-cont .loader:before {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent #a5a411 #a5a411;
+    position: absolute;
+    top: calc(50% - 37.5px);
+    left: calc(50% - 37.5px);
+    will-change: transform;
+    animation: spin 0.75s infinite ease-in-out;
+}
+
+.content {
+    width: 600px;
+
+    ::-webkit-scrollbar {
+        width: 4px;
+
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #472700;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #603601;
+    }
+}
+
+.content .row:first-child {
+    height: calc(100vh - 340px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::ng-deep .ngx-pagination {
+    padding: 0;
+}

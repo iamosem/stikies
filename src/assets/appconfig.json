@@ -1,0 +1,4 @@
+{
+  "apiServiceBaseUrl": "https://jsonplaceholder.typicode.com",
+  "appBaseUrl": "http://localhost:4002"
+}

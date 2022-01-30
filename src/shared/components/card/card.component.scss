@@ -1,0 +1,44 @@
+
+.container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .content {
+    overflow: hidden;
+}
+
+
+.content .left-content {
+    padding: 20px 20px 20px 30px;
+}
+
+.content .right-content {
+    font-size: 1.5rem;
+    padding: 0;
+    font-weight: 100;
+}
+
+.content .right-content.completed {
+    color: #fff;
+    background-color: #59af59;
+}
+
+.content .right-content.pending {
+    color: #fff;
+    background-color: #8b8b8b;
+}
+
+
+.content .left-content .title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.3rem;
+}
+
+.content .left-content .assignee {
+    font-size: 0.9rem;
+    opacity: 0.5;
+}

@@ -1,0 +1,56 @@
+.main-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.logo-image {
+    height: 300px;
+    width: 300px;
+    background: url('../../../assets/themes/img/stikies-logo-txt.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.author-image {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: url('../../../assets/themes/img/author-pp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.author-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.author-about .links .icon {
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.author-about .links .icon:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    -o-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+}
+
+.author-about .links .icon a i {
+    font-size: 1.6rem;
+}
+
+.author-about .links .icon .url {
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 6px;
+    color: #0a4e92;
+}

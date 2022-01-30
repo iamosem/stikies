@@ -1,0 +1,16 @@
+<div *ngIf="isLoading" class="loading-cont">
+    <div class="loading-veil"></div>
+    <div class="loader"></div>
+</div>
+<div class="content">
+    <div class="row">
+        <div *ngFor="let todo of todos | paginate: { itemsPerPage: 10, currentPage: currentPage }" class="col-12 my-2">
+            <app-card [title]="todo.title" [assignee]="getUserFullName(todo.userId)" [completed]="todo.completed"></app-card>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col d-flex justify-content-center">
+            <pagination-controls (pageChange)="currentPage = $event"></pagination-controls> 
+        </div>
+    </div>
+</div>
